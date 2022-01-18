@@ -208,7 +208,8 @@ function getRectangleString(/* width, height */) {
   // let heightRectangle = '';
   // // eslint-disable-next-line space-before-blocks
   // if (height > 2){
-  //   for (let i = 0; i < height - 2; i + 1) {
+  //   // eslint-disable-next-line no-plusplus
+  //   for (let i = 0; i < height - 2; i++) {
   //     heightRectangle += `\n${'│'.repeat(1)}${' '.repeat(width - 2)}${'│'.repeat(1)}`;
   //   }
   // }
@@ -217,7 +218,7 @@ function getRectangleString(/* width, height */) {
   // └${'─'.repeat(
   //   // eslint-disable-next-line comma-dangle
   //   width - 2)}┘\n`;
-  //   return rectangle;
+  // return rectangle;
 
   throw new Error('Not implemented');
 }
