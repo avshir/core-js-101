@@ -204,7 +204,7 @@ function extractEmails(str) {
  *             '└──────────┘\n'
  *
  */
-function getRectangleString(/* width, height */) {
+function getRectangleString(width, height) {
   // let heightRectangle = '';
   // // eslint-disable-next-line space-before-blocks
   // if (height > 2){
@@ -220,7 +220,11 @@ function getRectangleString(/* width, height */) {
   //   width - 2)}┘\n`;
   // return rectangle;
 
-  throw new Error('Not implemented');
+  // second method
+  const strStart = `┌${'─'.repeat(width - 2)}┐\n`;
+  const strFinish = `└${'─'.repeat(width - 2)}┘\n`;
+  const strMiddle = `│${' '.repeat(width - 2)}│\n`.repeat(height - 2);
+  return strStart + strMiddle + strFinish;
 }
 
 
